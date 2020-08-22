@@ -1,0 +1,106 @@
+body{
+     background-image: radial-gradient(circle,rgb(212, 195, 195) 10%,gray 90%);
+}
+@keyframes rot{
+    from{transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
+}
+@keyframes rot2{
+    from{transform: rotate(0deg);transform-origin:center right;}
+    to { transform: rotate(360deg);transform-origin:center right;}
+}
+@keyframes throw{
+    from { left:100px;} to{ left:793px;}
+}
+@keyframes throw2{
+    0%{left:100px}
+    40%{left: 690px;top:150px}
+    45%{rotate:60deg;}
+    100%{top:700px;left:620px}
+}
+@keyframes gameover{
+    from {transform: scale(1,1);}to {transform:scale(2,2);}
+}
+#mania2{
+    height: 450px;width: 1200px;
+    background-image:linear-gradient(to right,rgba(40, 40, 172, 0.678) 20%,rgba(0, 0, 255, 0.808),rgba(27, 27, 80, 0.966));
+    position: absolute;left:100px;
+    outline: 3px groove black;
+    display: flex;
+    -ms-flex-item-align: center;
+}
+#round{
+    width: 200px;height: 200px;object-fit: contain;position: relative;left:790px;top:92px;
+    animation: rot 1.5s infinite;
+    animation-timing-function: linear;
+    z-index: 2;
+}
+#knife{
+    width: 200px;height: 100px;object-fit: contain;position:absolute;left:10px;top:150px;
+}
+#button1{
+    font-family:Impact;
+    font-size: 20px;
+    width: 200px;height: 50px;text-align: center;outline: 5px inset black;
+    position:absolute;left: 300px;
+    top:500px;
+}
+#knife2{
+    width: 200px;height: 100px;object-fit: contain;position:absolute;left:10px;top:150px;
+    animation:throw linear 0.3s ;
+    animation-fill-mode: forwards;
+}
+#knife3{
+    width: 200px;height: 100px;object-fit: contain;position:absolute;left:10px;top:150px;
+    animation:throw2 linear 1s ;
+    animation-fill-mode: forwards;
+}
+#animate2{
+    width: 200px;height: 100px;object-fit: contain;position:absolute;left:793px;top:151px;
+    animation:rot2 1.5s infinite linear ;
+    z-index: 1;
+}
+#life {
+    background-image: linear-gradient(to right,rgb(155, 94, 94),yellow);
+    width:250px;height: 50px;display: flex;
+    justify-content: space-around;
+    align-items: center;
+    outline:3px solid black;position: relative;
+    top:490px;left:700px;
+}
+#life2 {
+    font-size: 20px;
+    background-image: linear-gradient(to right,rgb(139, 16, 16),rgb(0, 255, 34));
+    width:250px;height: 50px;display: flex;
+    justify-content: space-around;
+    align-items: center;
+    outline:3px solid black;position: relative;
+    top:440px;left:1000px;
+}
+
+#life > img{
+    height: 40px;width: 40px;object-fit:cover;
+}
+#gameover{
+    background-color: burlywood;
+    background-blend-mode:overlay;
+    
+    filter: blur(2px);height:700px;width:1300px;
+    position: absolute;top: 0px;
+    z-index: 4;
+}
+#text{
+    animation:gameover 1s linear forwards;
+    text-align: center;
+    font-weight: bold;font-size: 40px;color:blue;z-index: 5;
+    position: absolute;top:200px;left:500px;
+}
+#play{
+   position: absolute; top: 400px;left:500px;height:40px;width: 200px;background-image: linear-gradient(to right,blue,red);
+z-index: 6;
+}
+.point{
+    position: absolute; top: 300px;left:500px;height:40px;width: 200px;font:30px blue ;
+    font-family: sans-serif;
+ z-index: 6;
+ }

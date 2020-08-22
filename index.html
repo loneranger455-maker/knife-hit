@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+    <head>
+        <title>Knife Game</title>
+        <style>
+            span{
+                color:white;
+                font-size: 30px;
+            }
+            img{
+                height:300px;
+                width:300px;object-fit: contain;position: absolute;
+                top:150px;left:450px;
+               
+                transform-origin: right center;
+            }
+           
+            h2{
+                animation: start 0.8s linear infinite;position: absolute;top:550px;left:550px;
+            }
+            @keyframes start {
+                from {opacity: 100%;}
+                to{opacity: 20%;}
+            }
+        </style>
+        <script>
+            function runfun(){
+                  location.href="static/knife.html";
+            }
+        </script>
+    </head>
+    <body style="background-image: linear-gradient(to right, red, blue, green);">
+       <div style="width: 1200px;height: 900px;text-align: center;">
+           <img src="static/images/knife6.png">
+           <img style="transform: rotate(-180deg);left: 200px;" src="static/images/knife5.png">
+           <h1 style="font-size:140px;font-family:fantasy;font-weight: bold;position: relative
+           ;top: 20px; text-shadow: 4px 4px red;color:black;">KNIFE</h1>
+           <h1 style="font-size:100px;font-family:monospace;font-weight: bold;position: relative
+           ;top: 0px; text-shadow: 4px 4px red;color:black;">HIT</h2>
+        <button onclick=runfun()
+            
+         style="height: 70px;width: 200px;position:absolute;top: 480px;left:530px; border:3px red outset;font-size: medium; background-image: linear-gradient(to right,black,yellow);">PLAY</button>
+        <h2 >press play to start</h2>   
+    </div>
+    </body>
+
+</html>
