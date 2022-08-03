@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
 <html>
     <head>
         <title>Knife Hit</title>
         <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
             span{
                 color:white;
                 font-size: 30px;
             }
             img{
                 height:300px;
-                width:300px;object-fit: contain;position: absolute;
-                top:150px;left:450px;
+                width:300px;object-fit: contain;
+             
                
                 transform-origin: right center;
             }
            
             h2{
-                animation: start 0.8s linear infinite;position: absolute;top:550px;left:550px;
-            }
+                animation: start 0.8s linear infinite;}
             @keyframes start {
                 from {opacity: 100%;}
                 to{opacity: 20%;}
@@ -30,19 +36,27 @@
             }
         </script>
     </head>
-    <body style="background-image: linear-gradient(to right, red, blue, green);">
-       <div style="width: 1200px;height: 900px;text-align: center;">
-           <img src="static/images/knife6.png">
-           <img style="transform: rotate(-180deg);left: 200px;" src="static/images/knife5.png">
-           <h1 style="font-size:140px;font-family:fantasy;font-weight: bold;position: relative
-           ;top: 20px; text-shadow: 4px 4px red;color:black;">KNIFE</h1>
-           <h1 style="font-size:100px;font-family:monospace;font-weight: bold;position: relative
-           ;top: 0px; text-shadow: 4px 4px red;color:black;">HIT</h2>
-        <button onclick=runfun()
-            
-         style="height: 70px;width: 200px;position:absolute;top: 480px;left:530px; border:3px red outset;font-size: medium; background-image: linear-gradient(to right,black,yellow);">PLAY</button>
-        <h2 >press play to start</h2>   
-    </div>
+    <body style="background-color:lightblue;">
+        <div style="display:flex;width: 100vw">
+            <div style="width:40%;display: flex;position: relative;left: 10vw;top: 20vh;
+            height: 50vh;flex-direction: column;
+            padding: 4vh 2vw;background-color: antiquewhite;justify-content: center;
+            ">
+                <h1 style="font-size:65px;font-family:Courgette;letter-spacing: 1.5rem;">KNIFE</h1>
+                <h1  style="font-size:65px;font-family:Courgette;letter-spacing: 1.5rem;">HIT</h1>
+                <div style="display:flex;">
+                    <img style="position: absolute;top:24vh" src="/static/images/knife6.png">
+                    <img style=" transform:rotate(180deg);position:absolute;left:-15vw;top:24vh"src="/static/images/knife6.png">
+                </div>
+                
+            </div>
+            <div style="width:20%;position: relative;left: 20%;top: 30vh;font-size: 30px;">
+            Made with vanilla javascript with love
+            </div>
+           
+        </div>
+        <button style="
+        height:6vh;width:8vw;border:0px;position:absolute;right:26vw;background-color:crimson;color:white;" onclick="runfun()">Play</button>
     </body>
 
 </html>
